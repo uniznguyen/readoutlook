@@ -1,6 +1,8 @@
 import win32com.client
 import re
 
+#test
+
 outlook = win32com.client.Dispatch("Outlook.Application").GetNamespace("MAPI")
 
 # GetDefaultFolder with index = 6 is the Inbox
