@@ -25,7 +25,7 @@ if messages:
         body_content = message.body
 
         # use regular expression to find invoice date of 2017
-        result = re.search('\d{2}\/\d{2}\/(17)',body_content)
+        result = re.search(r'\d{2}\/\d{2}\/(17)',body_content)
 
         # if found the sync in 2018 but invoice dated 2017, print the subject line. 
         if result:
