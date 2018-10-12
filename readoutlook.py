@@ -29,4 +29,4 @@ if messages:
 
         # if found the sync in 2018 but invoice dated 2017, print the subject line. 
         if result:
-            print (message.subject)
+            print (message.subject, result.group())
