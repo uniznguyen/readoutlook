@@ -12,7 +12,7 @@ inbox = outlook.GetDeFaultFolder(6)
 Routepad = inbox.Folders("Route Pad sales")
 
 # filter emails where received time from 01/01/2018
-messages = Routepad.Items.Restrict("[ReceivedTime] >= '01/01/2018'")
+messages = Routepad.Items.Restrict("[ReceivedTime] >= '01/01/2019'")
 
 # sort by received time
 messages.Sort("[ReceivedTime]")
@@ -25,7 +25,7 @@ if messages:
         body_content = message.body
 
         # use regular expression to find invoice date of 2017
-        result = re.search(r'\d{2}\/\d{2}\/(17)',body_content)
+        result = re.search(r'\d{2}\/\d{2}\/(18)',body_content)
 
         # if found the sync in 2018 but invoice dated 2017, print the subject line. 
         if result:
