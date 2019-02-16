@@ -30,11 +30,11 @@ if messages:
 				for y in invoice_dates:
 					invoice_date = datetime.strptime(y,'%m/%d/%y').date()
 					sent_date = datetime.strptime(i,'%m/%d/%Y').date()
-					send_month = sent_date.strftime('%B')
-					invoice_month = invoice_date.strftime('%B')
+					send_month = sent_date.strftime('%B-%Y')
+					invoice_month = invoice_date.strftime('%B-%Y')
 					day_diff = (invoice_date - sent_date)
 
-					if invoice_month != send_month:
+					if send_month != invoice_month:
 						print (message.subject,send_month, invoice_month, invoice_date, day_diff)
 					
 				
