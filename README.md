@@ -1,2 +1,2 @@
 # readoutlook
-This tool is to fetch emails in Outlook, look through notification emails from Routepad, find the syncs that were done in 2018 but invoice is dated 2017
+This tool is to find out the invoices sync from Routepad that were send late. It will compare the send date and the invoice date, print out how many date it's late.
