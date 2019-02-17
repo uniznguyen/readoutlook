@@ -12,7 +12,7 @@ inbox = outlook.GetDeFaultFolder(6)
 Routepad = inbox.Folders("Route Pad sales")
 
 # filter emails where received time from 01/01/2018
-messages = Routepad.Items.Restrict("[ReceivedTime] >= '01/01/2018'")
+messages = Routepad.Items.Restrict("[ReceivedTime] >= '01/01/2018' And [ReceivedTime] <= '12/31/2018'")
 
 # sort by received time
 messages.Sort("[ReceivedTime]")
