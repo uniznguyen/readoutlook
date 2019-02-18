@@ -12,7 +12,7 @@ inbox = outlook.GetDeFaultFolder(6)
 Routepad = inbox.Folders("Route Pad sales")
 
 # filter emails where received time from 01/01/2018
-messages = Routepad.Items.Restrict("[ReceivedTime] >= '01/01/2018' And [ReceivedTime] <= '12/31/2018'")
+messages = Routepad.Items.Restrict("[ReceivedTime] >= '01/01/2019' And [ReceivedTime] <= '12/31/2019'")
 
 # sort by received time
 messages.Sort("[ReceivedTime]")
@@ -35,7 +35,7 @@ if messages:
 					day_diff = (invoice_date - sent_date)
 
 					if send_month != invoice_month:
-						print (message.subject,send_month, invoice_month, invoice_date, day_diff)
+						print (message.subject, f'Sent Month: {send_month}, Invoice Month: {invoice_month}, Invoice Date: {invoice_date}, Days late: {day_diff}')
 					
 				
     		
